@@ -1,8 +1,8 @@
 package com.duongvh19.listadapter
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.duongvh19.listadapter.data.SportsData
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
 import com.duongvh19.listadapter.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,8 +13,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val sportsAdapter = SportsAdapter()
-        sportsAdapter.submitList(SportsData.getSportsData())
-        binding.sportsList.adapter = sportsAdapter
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
+        val navController = navHostFragment.navController
+
     }
 }

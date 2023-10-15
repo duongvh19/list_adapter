@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/listSportFragment">
+
+    <fragment
+        android:id="@+id/listSportFragment"
+        android:name="com.duongvh19.listadapter.ListSportFragment"
+        android:label="fragment_list_sport"
+        tools:layout="@layout/fragment_list_sport" >
+
+        <action
+            android:id="@+id/action_listSportFragment_to_detailSportFragment"
+            app:destination="@id/detailSportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailSportFragment"
+        android:name="com.duongvh19.listadapter.DetailSportFragment"
+        android:label="fragment_detail_sport"
+        tools:layout="@layout/fragment_detail_sport" >
+        <action
+            android:id="@+id/action_detailSportFragment_to_listSportFragment"
+            app:destination="@id/listSportFragment" />
+
+    </fragment>
+</navigation>

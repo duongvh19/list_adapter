@@ -1,6 +1,7 @@
 package com.duongvh19.listadapter.model
 
 import com.duongvh19.listadapter.R
+import java.io.Serializable
 
 data class Sport(
     val id: Int,
@@ -9,4 +10,4 @@ data class Sport(
     val imageResourceId: Int,
     val sportsImageBanner: Int,
     val newsDetails: Int = R.string.sports_news_detail_text
-)
+) : Serializable

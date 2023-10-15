@@ -36,4 +36,6 @@
     <string name="swimming_subtitle">Here is some Swimming news!</string>
     <string name="table_tennis_subtitle">Here is some Table Tennis news!</string>
     <string name="tennis_subtitle">Here is some Tennis news!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

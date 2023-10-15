@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.duongvh19.listadapter.databinding.ItemSportBinding
 import com.duongvh19.listadapter.model.Sport
 
-class SportsAdapter : ListAdapter<Sport, SportsAdapter.SportViewHolder> (DiffCallback){
+class SportsAdapter(private val onClickItem : (Sport) -> Unit) :
+    ListAdapter<Sport, SportsAdapter.SportViewHolder> (DiffCallback){
 
     private lateinit var context: Context
 
@@ -23,6 +24,9 @@ class SportsAdapter : ListAdapter<Sport, SportsAdapter.SportViewHolder> (DiffCal
 
     override fun onBindViewHolder(holder: SportViewHolder, position: Int) {
         val currentItem = getItem(position)
+        holder.itemView.setOnClickListener{
+            onClickItem(currentItem)
+        }
         holder.bindItem(currentItem, context)
     }
 
