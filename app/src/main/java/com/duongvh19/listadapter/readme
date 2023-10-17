@@ -59,7 +59,7 @@
         tools:listitem="@layout/item_sport"/>
 
 + trong item cũng cần căn margin start và end, ngoài ra còn cần căn bottom
-view trong item cần để with = wrap_content, để khi chia theo grid thì sẽ tự tự tính
+view trong item cần để with = match_parent, để khi chia theo grid thì sẽ tự tự tính
 height của item có thể chia theo tỷ lệ với width
 
 
@@ -86,7 +86,7 @@ height của item có thể chia theo tỷ lệ với width
 
             <ImageView
                 android:id="@+id/sportsImage"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintDimensionRatio="1:1"
                 android:contentDescription="@null"
